@@ -9,13 +9,15 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductService } from './product-service';
 import { HomeComponent } from './home/home.component';
+import { ProductAddComponent } from './product-add/product-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     ProductListComponent,
-    HomeComponent
+    HomeComponent,
+    ProductAddComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import { HomeComponent } from './home/home.component';
     RouterModule.forRoot([
           { path: 'home', component: HomeComponent },
           { path: 'product-list', component: ProductListComponent },
+          { path: 'product-add', component: ProductAddComponent },
           { path: '**', redirectTo: 'home' }
       ])
   ],
