@@ -11,6 +11,7 @@ import { ProductService } from './product-service';
 import { HomeComponent } from './home/home.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
     ProductListComponent,
     HomeComponent,
     ProductAddComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,7 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
           { path: 'product-list', component: ProductListComponent },
           { path: 'product-add', component: ProductAddComponent },
           { path: 'product-edit', component: ProductEditComponent },
+          { path: 'product-details', component: ProductDetailsComponent },
           { path: '**', redirectTo: 'home' }
       ])
   ],

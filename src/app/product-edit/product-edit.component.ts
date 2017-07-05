@@ -6,7 +6,7 @@ import { Product } from '../product.model';
 
 @Component({
     selector: 'product-edit',
-    template: require('./product-edit.component.html')
+    templateUrl: './product-edit.component.html'
 })
 export class ProductEditComponent implements OnInit{
     productId: number;
