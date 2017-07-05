@@ -10,6 +10,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductService } from './product-service';
 import { HomeComponent } from './home/home.component';
 import { ProductAddComponent } from './product-add/product-add.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProductAddComponent } from './product-add/product-add.component';
     NavMenuComponent,
     ProductListComponent,
     HomeComponent,
-    ProductAddComponent
+    ProductAddComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,7 @@ import { ProductAddComponent } from './product-add/product-add.component';
           { path: 'home', component: HomeComponent },
           { path: 'product-list', component: ProductListComponent },
           { path: 'product-add', component: ProductAddComponent },
+          { path: 'product-edit', component: ProductEditComponent },
           { path: '**', redirectTo: 'home' }
       ])
   ],
