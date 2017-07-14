@@ -21,7 +21,7 @@ export class ProductEditComponent implements OnInit{
        this.route.queryParams.subscribe(params => {
             this.productId = params['productId'];
         });
-       this.http.get('/api/Product/'+ this.productId).subscribe(result => {
+       this.http.get('http://localhost:8929/api/Product/'+ this.productId).subscribe(result => {
             this.product = result.json();
         });
     }

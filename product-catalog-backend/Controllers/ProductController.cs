@@ -3,12 +3,14 @@ using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
 using System.IO;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace ProductCatalog.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("MyPolicy")]
     public class ProductController : Controller
     {
         IQueryPipe sqlQuery = null;

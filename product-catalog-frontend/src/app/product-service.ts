@@ -11,11 +11,11 @@ export class ProductService {
     }
     
     getProducts(): Observable<any> {
-        return this.http.get('/api/Product');
+        return this.http.get('http://localhost:8929/api/Product');
     }
 
     getProduct(productId: number): any {
-        return this.http.get('/api/Product/' + productId);
+        return this.http.get('http://localhost:8929/api/Product/' + productId);
     }
 
     addProduct(product: any) {
@@ -23,7 +23,7 @@ export class ProductService {
         let body = JSON.stringify(product);
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers }); 
-        this.http.post('/api/Product', body, options).subscribe(() => {
+        this.http.post('http://localhost:8929/api/Product', body, options).subscribe(() => {
             this.location.back();
         });
     }
@@ -32,12 +32,12 @@ export class ProductService {
         let body = JSON.stringify(product);
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers }); 
-        this.http.put('/api/Product/'+ productId, body, options).subscribe(() => {
+        this.http.put('http://localhost:8929/api/Product/'+ productId, body, options).subscribe(() => {
             this.location.back();
         });
     }
 
     deleteProduct(productId: number): any {
-        return this.http.delete('/api/Product/' + productId);
+        return this.http.delete('http://localhost:8929/api/Product/' + productId);
     }
 }
